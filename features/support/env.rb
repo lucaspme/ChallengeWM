@@ -10,6 +10,9 @@ require 'httparty'
 require 'open-uri'
 require 'faker'
 
+USERNAME = ENV['username']
+PASSWORD = ENV['password']
+
 include Capybara::DSL
 RSpec.configure do |config|
   config.include Capybara::DSL, :type => :feature
@@ -24,5 +27,7 @@ Capybara.register_driver :selenium do |app|
 end
 
 Capybara.configure do |config|
+    config.current_driver = :selenium
     config.default_max_wait_time = 3
+    Capybara.page.driver.browser.manage.window.maximize
 end
