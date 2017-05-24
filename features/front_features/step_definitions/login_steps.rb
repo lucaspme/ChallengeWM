@@ -8,12 +8,10 @@ Dado(/^insiro dados válidos nos campos de login$/) do
 end
 
 Então(/^o sistema exibirá a mensagem "([^"]*)"$/) do |msg|
-  binding.pry
   @login.valida_acesso(msg)
 end
 
 Dado(/^que clico no botão logout$/) do
-  @login.valida_acesso("jhjkhjkh")
-  binding.pry
+  @login = Login.new
   @login.realiza_logoff
 end
