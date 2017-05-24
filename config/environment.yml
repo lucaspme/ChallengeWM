@@ -1,0 +1,4 @@
+api:
+  correios: 'http://correiosapi.apphb.com/cep'
+front:
+  credito_pessoal: 'https://cp-spa-dev.appls.cmpn.paas.gsnetcloud.corp/#/credito-pessoal/'
