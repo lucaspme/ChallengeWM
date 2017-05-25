@@ -25,6 +25,6 @@
 	* Para testes de back-end:
 		$ cucumber --tag ENV=api
 	* Para testes de front-end
-		$ cucumber --tag EVV=front username=tomsmith password=SuperSecretPassword!
+		$ cucumber --tag ENV=front username=tomsmith password=SuperSecretPassword!
 ## Observações:
 	Ao rodar os testes se não for enviado o parâmetro ENV, por default serão executados os testes de API
