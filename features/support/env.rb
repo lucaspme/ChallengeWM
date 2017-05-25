@@ -20,7 +20,6 @@ end
 
 ENV['ENV'] = 'api' unless ENV.has_key?'ENV'
 ENVIRONMENT = YAML.load_file('./config/environment.yml')[ENV['ENV']]
-# DEFAULT_DATA = YAML.load_file('./fixtures/data_files/datafile.yml')[ENV['ENV']]
 
 Capybara.register_driver :selenium do |app|
     Capybara::Selenium::Driver.new(app, :browser => :chrome)
